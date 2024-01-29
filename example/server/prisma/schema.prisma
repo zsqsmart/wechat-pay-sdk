@@ -1,0 +1,44 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "../node_modules/.prisma/client"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model Product {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  name      String
+  cover     String
+  price     Int      @db.Int
+  updatedAt DateTime @updatedAt
+  createdAt DateTime @default(now())
+
+  @@map("product")
+}
+
+model Order {
+  id        String      @id @default(auto()) @map("_id") @db.ObjectId
+  // 总金额
+  amount    Int         @db.Int
+  // 支付的二维码连接
+  codeUrl   String      @default("")
+  status    OrderStatus @default(un_paid)
+  updatedAt DateTime    @updatedAt
+  createdAt DateTime    @default(now())
+
+  @@map("order")
+}
+
+enum OrderStatus {
+  un_paid
+  paid
+  canceled
+  failed
+  closed
+}
