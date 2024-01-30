@@ -13,7 +13,6 @@ export const enum WechatTradeStateEnum {
   PAY_ERROR = 'PAYERROR', // 支付失败(其他原因，如银行返回失败)
 }
 
-
 export interface Options {
   // 公众号 id
   appid: string;

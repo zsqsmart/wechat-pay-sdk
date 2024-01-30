@@ -270,7 +270,7 @@ importers:
 
   example/client:
     dependencies:
-      '@pay/wechat':
+      'wx-node-sdk':
         specifier: workspace:*
         version: link:../../sdk
 
@@ -288,7 +288,7 @@ importers:
       '@nestjs/platform-express':
         specifier: ^10.0.0
         version: 10.3.1(@nestjs/common@10.3.1)(@nestjs/core@10.3.1)
-      '@pay/wechat':
+      'wx-node-sdk':
         specifier: workspace:*
         version: link:../../sdk
       reflect-metadata:

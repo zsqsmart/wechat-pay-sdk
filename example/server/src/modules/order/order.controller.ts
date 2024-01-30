@@ -13,7 +13,7 @@ import {
 import { OrderService } from './order.service';
 import { CreateOrderDto } from './dto/create-order.dto';
 import { UpdateOrderDto } from './dto/update-order.dto';
-import { WechatTradeStateEnum } from '@pay/wechat';
+import { WechatTradeStateEnum } from 'wx-node-sdk';
 import { wechatPay } from 'src/utils/wechat-pay';
 
 @Controller('order')
