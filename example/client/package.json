@@ -9,6 +9,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@pay/wechat": "workspace:*"
+    "wx-node-sdk": "workspace:*"
   }
 }

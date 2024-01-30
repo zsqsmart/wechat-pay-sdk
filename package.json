@@ -5,7 +5,9 @@
     "start:sdk": "pnpm -C ./sdk dev",
     "start:example-server": "pnpm -C ./example/server start:dev",
     "start:example-client": "pnpm -C ./example/client dev",
-    "start": "run-p start:*"
+    "start": "run-p start:*",
+    "lint": "eslint . --fix",
+    "format": "prettier . --write --ignore-unknown"
   },
   "keywords": [],
   "author": "",

@@ -1,4 +1,4 @@
-import { WechatTradeStateEnum } from '@pay/wechat';
+import { WechatTradeStateEnum } from 'wx-node-sdk';
 
 export const ORDER_STATUS_DIC = {
   [WechatTradeStateEnum.SUCCESS]: '支付成功',

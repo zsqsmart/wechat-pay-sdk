@@ -19,8 +19,8 @@
     "stripInternal": true,
     "paths": {
       "src/*": ["src/*"],
-      "server/*": ["../server/src/*"]
-    }
+      "server/*": ["../server/src/*"],
+    },
   },
   "exclude": [
     "node_modules",
@@ -30,6 +30,6 @@
     "locale",
     "scripts",
     "**/__tests__/**/*",
-    "site/dist"
-  ]
+    "site/dist",
+  ],
 }

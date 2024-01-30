@@ -1,4 +1,4 @@
-import type { WechatTradeStateEnum } from '@pay/wechat';
+import type { WechatTradeStateEnum } from 'wx-node-sdk';
 
 export interface Order {
   product: string;

@@ -1,4 +1,4 @@
-import WechatPay from '@pay/wechat';
+import WechatPay from 'wx-node-sdk';
 import { APP_CONFIGS } from 'src/constants';
 import fse from 'fs-extra';
 

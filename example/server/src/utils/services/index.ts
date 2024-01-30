@@ -11,7 +11,7 @@ export const startServices = async (
   app: NestFastifyApplication<RawServerDefault>,
 ) => {
   for (const service of services) {
-    const serviceName = service.constructor.name
+    const serviceName = service.constructor.name;
     logger.log(`${serviceName} starting`);
     try {
       await service.start(app);

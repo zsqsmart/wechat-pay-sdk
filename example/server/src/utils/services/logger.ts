@@ -4,7 +4,6 @@ import { format as dateFormat } from 'date-fns';
 import { createLogger, format, Logger, transports } from 'winston';
 import 'winston-daily-rotate-file';
 
-
 import { BootstrapService } from './base';
 
 export class LoggerService implements BootstrapService, NestLoggerService {
@@ -21,9 +20,7 @@ export class LoggerService implements BootstrapService, NestLoggerService {
       }),
       transports: [
         new transports.Console({
-          format: format.combine(
-            format.colorize(),
-          ),
+          format: format.combine(format.colorize()),
         }),
         new transports.DailyRotateFile({
           level: 'info',
@@ -31,14 +28,14 @@ export class LoggerService implements BootstrapService, NestLoggerService {
           filename: '%DATE%.log',
           datePattern: 'YYYY-MM-DD',
           maxSize: '100k',
-        })
+        }),
       ],
     });
   }
 
-  async start() { }
+  async start() {}
 
-  async stop() { }
+  async stop() {}
 
   log(message: string, context?: string) {
     const time = dateFormat(Date.now(), 'yyyy-MM-dd HH:mm:ss');

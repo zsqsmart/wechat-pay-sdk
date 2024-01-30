@@ -22,7 +22,7 @@ export const reqOrderList = () =>
       expire: 0,
     },
   });
-  
+
 // 关系订单
 export const reqCloseOrder = (orderId: string) =>
   request.Patch(`/order/${orderId}/close`);

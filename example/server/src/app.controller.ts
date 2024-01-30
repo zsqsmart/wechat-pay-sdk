@@ -9,12 +9,12 @@ export class AppController {
   @Get()
   home(): string {
     logger.log('wechat pay');
-    return 'wechat pay'
+    return 'wechat pay';
   }
 
   @Get('hello')
   getHello(): string {
     logger.log('wechat pay');
-    return 'wechat pay'
+    return 'wechat pay';
   }
 }

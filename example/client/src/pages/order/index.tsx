@@ -7,7 +7,7 @@ import {
   NButton,
   NPopconfirm,
 } from 'naive-ui';
-import { WechatTradeStateEnum } from '@pay/wechat';
+import { WechatTradeStateEnum } from 'wx-node-sdk';
 import { reqCloseOrder, reqOrderList } from 'src/apis/order';
 import PayQrCode from 'src/components/pay-qr-code';
 import { ORDER_STATUS_DIC } from 'src/constants';

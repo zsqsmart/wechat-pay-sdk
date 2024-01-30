@@ -1,5 +1,5 @@
 import mongoose, { Schema, model } from 'mongoose';
-import { WechatTradeStateEnum } from '@pay/wechat';
+import { WechatTradeStateEnum } from 'wx-node-sdk';
 
 const OrderSchema = new Schema(
   {

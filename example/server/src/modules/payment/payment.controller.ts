@@ -7,7 +7,7 @@ import {
 import { wechatPay } from 'src/utils/wechat-pay';
 import { logger } from 'src/utils/services/logger';
 import { Order } from 'src/utils/services/mongo/models/order';
-import { WechatTradeStateEnum } from '@pay/wechat';
+import { WechatTradeStateEnum } from 'wx-node-sdk';
 
 interface WechatTradeInfo {
   appid: string;
