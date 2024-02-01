@@ -44,6 +44,6 @@ jobs:
 
       - run: |
           cd ./sdk
-          echo "//registry.npmjs.com/:_authToken=${{ secrets.NPM_TOKEN }}" >> ./.npmrc
-          cat ./.npmrc
-          pnpm publish --tag ${{ github.ref_name }}
+          echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" >> ./.npmrc
+          npm version ${{ github.ref_name }}
+          npm publish
